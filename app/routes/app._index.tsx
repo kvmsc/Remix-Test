@@ -99,8 +99,6 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const newDateConfigJSON = formData.get("dateConfig");
   const shopId = formData.get("shopId");
 
-  console.log(newDateConfigJSON, shopId);
-
   const response = await admin.graphql(
     `#graphql
       mutation setMetafield {

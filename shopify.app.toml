@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "956eb85ae1f2605b7019c0bbab4e9f64"
-application_url = "https://awarded-sol-moscow-spider.trycloudflare.com"
+application_url = "https://remix-test-mohit.onrender.com"
 embedded = true
 name = "Delivery Date Config - Remix"
 handle = "delivery-date-config-remix"
@@ -19,13 +19,13 @@ api_version = "2025-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://awarded-sol-moscow-spider.trycloudflare.com/auth/callback",
-  "https://awarded-sol-moscow-spider.trycloudflare.com/auth/shopify/callback",
-  "https://awarded-sol-moscow-spider.trycloudflare.com/api/auth/callback"
+  "https://remix-test-mohit.onrender.com/auth/callback",
+  "https://remix-test-mohit.onrender.com/auth/shopify/callback",
+  "https://remix-test-mohit.onrender.com/api/auth/callback"
 ]
 
 [pos]
@@ -34,3 +34,4 @@ embedded = false
 [build]
 dev_store_url = "arctic-grey-assessment.myshopify.com"
 automatically_update_urls_on_dev = true
+include_config_on_deploy = true

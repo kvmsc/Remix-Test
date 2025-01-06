@@ -34,7 +34,6 @@ function Extension() {
   useEffect(() => {
     if (attributeValues.length > 0) {
       setSelectedDate(attributeValues[0]);
-      console.log("mohattributeValues", attributeValues[0]);
     }
   }, []);
 
@@ -111,7 +110,7 @@ function Extension() {
             reason: 'Invalid delivery date',
             errors: [
               {
-                message: 'Please select a valid delivery date.',
+                message: 'The selected delivery date is unavailable. Please choose another date.',
               },
             ],
           };
@@ -140,7 +139,6 @@ function Extension() {
       const newRules = await getAvailabilityRules();
       setAvailabilityRules(newRules);
       if (selectedDate && !validateDate(selectedDate, newRules)) {
-        setSelectedDate(undefined);
         setIsValid(false);
       }
     }, 60 * 1000);
