@@ -1,5 +1,5 @@
 # Use the official Yarn image which comes with Yarn pre-installed
-FROM node:18-alpine
+FROM node:20-alpine
 
 RUN apk add --no-cache openssl
 
