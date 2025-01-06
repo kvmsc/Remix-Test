@@ -13,9 +13,6 @@ COPY package.json yarn.lock* ./
 
 # Install dependencies using yarn
 RUN yarn install --frozen-lockfile --production && yarn cache clean
-# Remove CLI packages since we don't need them in production by default.
-# Remove this line if you want to run CLI commands in your container.
-RUN yarn remove @shopify/cli
 
 COPY . .
 
